@@ -1,0 +1,23 @@
+{
+  "name": "task-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "dev": "concurrently \"cd task-manager-backend && npm run dev\" \"cd task-manager-frontend && npm run dev\""
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhinavc2p2/Task-Managment-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhinavc2p2/Task-Managment-System/issues"
+  },
+  "homepage": "https://github.com/Abhinavc2p2/Task-Managment-System#readme",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

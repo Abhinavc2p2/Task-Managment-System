@@ -8,10 +8,13 @@ import taskRoutes from "./routes/task.routes";
 
 
 const app = express();
-console.log("ENV:", process.env.DATABASE_URL);
-app.use(cors());
+
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
 app.use(express.json());
-console.log(process.env.DATABASE_URL);
+
 // 👉 connect routes
 app.use("/auth", authRoutes);
 
@@ -20,7 +23,7 @@ app.use("/tasks", taskRoutes);
 
 app.get("/", (req, res) => {
   res.send("API is running ");
-  console.log("ENV:", process.env.DATABASE_URL);
+ 
 });
 
 
